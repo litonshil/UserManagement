@@ -38,14 +38,22 @@
                                 <div class="form-group row">
                                     <label for="usertype"
                                         class="col-md-4 col-form-label font-weight-bold text-md-right">User Type</label>
-                                    <div class="col-md-6">
+
+                                        <div class="col-md-6">
+                                            <select class="form-control " id="usertype" name="selecttype">
+                                                    <option>Select Your Type</option>
+                                                    <option>Admin</option>
+                                                    <option>Student</option>
+                                            </select>
+                                        </div>
+                                <!--    <div class="col-md-6">
                                         <input type="text" id="usertype" class="form-control" name="usertype">
-                                        @error('usertype')
+                                        error('usertype')
                                             <div class="error text-danger">
-                                                {{ $message }}
+                                                { $message }}
                                             </div>
-                                        @enderror
-                                    </div>
+                                        enderror
+                                    </div>-->
                                 </div>
                                 <div class="form-group row">
                                     <label for="email"

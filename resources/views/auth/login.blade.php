@@ -8,7 +8,13 @@
                     <div class="card">
                         <div class="card-header font-weight-bold text-lg">Login Form</div>
                         <div class="card-body">
+                            @if (session('status'))
+                                <div class="row text-danger">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
                             <form class="bg-light" name="my-form" action="{{ route('login') }}" method="post">
+
                                 @csrf
                                 <div class="form-group row">
                                     <label for="usertype"
@@ -59,7 +65,5 @@
             </div>
         </div>
         </div>
-
     </main>
-
 @endsection

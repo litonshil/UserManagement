@@ -21,6 +21,9 @@ class LoginController extends Controller
         if(! auth()->attempt($request->only('email','password','usertype'), $request->remember)){
             return back()->with('status','Invalid Login');
         }
-        return redirect()->route('dashboard');
+        $usertype = $request->usertype;
+        dd($usertype);
+        
+        return redirect()->route('dashboard',['usertype' => $usertype]);
     }
 }
